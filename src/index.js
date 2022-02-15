@@ -15,3 +15,15 @@ ReactDOM.render(
     </Routes>
   </BrowserRouter>, 
 document.getElementById("root"));
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Routes >
+      {/* <Route path="/" element={<App/>} /> */}
+      <Route path="/" element={<Home/>} />
+      <Route path="/resume" element={<Resume/>} />
+      <Route path="/projects" element={<Projects/>} />
+    </Routes>
+  </BrowserRouter>, 
+  document.getElementById("root/home")
+)
