@@ -40,7 +40,7 @@ const Home = () => {
             <div className='body__information-text'>
               <p>Orange County, California</p>
             </div>
-            <h2>I attended </h2>
+            <h2>I attended: </h2>
             <div className='body__information-text'>
               <p>Loyola Marymount University</p>
               <p>Computer Science B.S. </p>
