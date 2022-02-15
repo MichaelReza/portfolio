@@ -1,0 +1,247 @@
+:root {
+  --text-wheel-font-size: 1rem;
+}
+
+.gradient_text {
+  background: var(--gradient-text-header);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px #00000000;
+}
+
+.text__carousel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: var(--text-wheel-font-size);
+  /* z-index: -1; */
+}
+
+.text__intro {
+  display: flex;
+  width: fit-content;
+  color: lightslategray;
+  align-items: center;
+}
+
+.text__mask {
+  display: flex;
+  flex: 1;
+  padding-left: 0.5rem;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+.text__mask ul {
+  position: relative;
+  width: 100%;
+}
+
+.text__mask li {
+  list-style: none;
+  color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+}
+
+.text__mask li:nth-child(1) {
+  animation: cycle1 20s ease-in infinite;
+  animation-delay: 1s;
+}
+
+.text__mask li:nth-child(2) {
+  animation: cycle2 20s ease-in infinite;
+  animation-delay: 1s;
+}
+.text__mask li:nth-child(3) {
+  animation: cycle3 20s ease-in infinite;
+  animation-delay: 1s;
+}
+.text__mask li:nth-child(4) {
+  animation: cycle4 20s ease-in infinite;
+  animation-delay: 1s;
+}
+
+@keyframes cycle1 {
+  0% {
+    top: calc(-2.5rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 0;
+  }
+  2.5% {
+    top: calc(0rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 1;
+  }
+  22.5% {
+    top: calc(0rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 1;
+  }
+  25%,
+  100% {
+    top: 2.5rem;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cycle1 {
+  0% {
+    top: calc(-2.5rem - var(--text-wheel-font-size));
+    opacity: 0;
+  }
+  2.5% {
+    top: calc(0rem - var(--text-wheel-font-size));
+    opacity: 1;
+  }
+  22.5% {
+    top: calc(0rem - var(--text-wheel-font-size));
+    opacity: 1;
+  }
+  25%,
+  100% {
+    top: 2.5rem;
+    opacity: 0;
+  }
+}
+
+@keyframes cycle2 {
+  0%,
+  25% {
+    top: calc(-2.5rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 0;
+  }
+  27.5% {
+    top: calc(0rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 1;
+  }
+  47.5% {
+    top: calc(0rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 1;
+  }
+  50%,
+  100% {
+    top: 2.5rem;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cycle2 {
+  0%,
+  25% {
+    top: calc(-2.5rem - var(--text-wheel-font-size));
+    opacity: 0;
+  }
+  27.5% {
+    top: calc(0rem - var(--text-wheel-font-size));
+    opacity: 1;
+  }
+  47.5% {
+    top: calc(0rem - var(--text-wheel-font-size));
+    opacity: 1;
+  }
+  50%,
+  100% {
+    top: 2.5rem;
+    opacity: 0;
+  }
+}
+
+@keyframes cycle3 {
+  0%,
+  50% {
+    top: calc(-2.5rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 0;
+  }
+  52.5% {
+    top: calc(0rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 1;
+  }
+  72.5% {
+    top: calc(0rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 1;
+  }
+  75%,
+  100% {
+    top: 2.5rem;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cycle3 {
+  0%,
+  50% {
+    top: calc(-2.5rem - var(--text-wheel-font-size));
+    opacity: 0;
+  }
+  52.5% {
+    top: calc(0rem - var(--text-wheel-font-size));
+    opacity: 1;
+  }
+  72.5% {
+    top: calc(0rem - var(--text-wheel-font-size));
+    opacity: 1;
+  }
+  75%,
+  100% {
+    top: 2.5rem;
+    opacity: 0;
+  }
+}
+
+@keyframes cycle4 {
+  0%,
+  75% {
+    top: calc(-2.5rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 0;
+  }
+  77.5% {
+    top: calc(0rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 1;
+  }
+  97.5% {
+    top: calc(0rem - var(--text-wheel-font-size) * 1.5);
+    opacity: 1;
+  }
+  100% {
+    top: 2.5rem;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cycle4 {
+  0%,
+  75% {
+    top: calc(-2.5rem - var(--text-wheel-font-size));
+    opacity: 0;
+  }
+  77.5% {
+    top: calc(0rem - var(--text-wheel-font-size));
+    opacity: 1;
+  }
+  97.5% {
+    top: calc(0rem - var(--text-wheel-font-size));
+    opacity: 1;
+  }
+  100% {
+    top: 2.5rem;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --text-wheel-font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --text-wheel-font-size: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 590px) {
+}
+
+@media screen and (max-width: 440px) {
+}

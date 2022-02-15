@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import { Header, Footer } from './containers'
+import { Card } from './components/index'
+import './App.css'
+import * as image from './assets/images/index.js'
+import { useNavigate } from 'react-router-dom'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+const Loading = () => {
+
+  const [animationTimer, setAnimationTimer] = useState(false)
+
+  setInterval(() => {
+    setAnimationTimer(true)
+  }, 1500)
+
+  return(
+    <>
+      <div className="loader_page" style={{"backgroundColor": 'black'}}>
+        {animationTimer
+        ? <div className="roll-out-right">
+            <img src={image.logo} alt="logo" className="loader_page-logo"/>
+          </div>
+        : <div className="scale-up-center">
+            <img src={image.logo} alt="logo" className="loader_page-logo"/>
+          </div>
+        }
+      </div>
+    </>
+  )
 }
 
-export default App;
+
+const App = () => {
+  const [loading, setLoading] = useState(true)
+  const navigate = useNavigate();
+  
+  setTimeout(() => {
+    setLoading(false)
+    navigate('/home')
+  }, 2200)
+
+  return (
+    <div className="App">
+      {loading ? <Loading></Loading> : <></>}
+    </div>
+  )
+}
+
+
+export default App
+
