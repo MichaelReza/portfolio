@@ -30,17 +30,17 @@ const Home = () => {
             beginningText="I am a"
             text={["Computer Science Major", "Full Stack Developer", "Database Manager", "Web Designer"]}
             /> */}
-            <h2>I am a </h2>
+            <h2>I am a</h2>
             <div className='body__information-text'>
               <p>Software Engineer</p>
               <p>Database Manager</p>
               <p>Web Developer</p>
             </div>
-            <h2>I am from </h2>
+            <h2>I am from</h2>
             <div className='body__information-text'>
               <p>Orange County, California</p>
             </div>
-            <h2>I attended: </h2>
+            <h2>I attended</h2>
             <div className='body__information-text'>
               <p>Loyola Marymount University</p>
               <p>Computer Science B.S. </p>
