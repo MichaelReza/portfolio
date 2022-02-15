@@ -14,4 +14,4 @@ ReactDOM.render(
       <Route path="/projects" element={<Projects/>} />
     </Routes>
   </BrowserRouter>, 
-document.getElementById("root"));
+document.getElementById("root")); 
