@@ -13,7 +13,7 @@
         "destination": "/index.html"
       }
     ]
-  },{
+  }, {
     "target": "testing",
     "public": "build",
     "ignore": [
