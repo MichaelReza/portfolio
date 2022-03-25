@@ -26,4 +26,4 @@ jobs:
       - name: install firebase
         run: npm i firebase-tools -g
       - name: deploy
-        run: firebase deploy --only hosting:testing --token ${{ secrets.FIREBASE_PORTFOLIO_TEST_TOKEN }}
+        run: firebase deploy --project portfolio-testing-f1801 --only hosting:testing --token ${{ secrets.FIREBASE_PORTFOLIO_TEST_TOKEN }}
