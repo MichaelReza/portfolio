@@ -21,7 +21,7 @@ const Home = () => {
           <div className="body__headshot-container">
             <div className="body__headshot-backing_orange"></div>
             <div className="body__headshot-backing_gray"></div>
-            <img alt="headshot" src={window["headshot"] ?? headshot} />
+            <img alt="headshot" src={headshot} />
             <div></div>
           </div>
         </div>

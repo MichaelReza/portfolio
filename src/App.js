@@ -11,7 +11,6 @@ const Loading = (props) => {
 
   const [animationFinished, setAnimationFinished] = useState(false)
   const [cached, setCached] = useState(false)
-  window["headshot"] = image.headshot
 
   useEffect(() => {
     cacheImages([image.headshot])
