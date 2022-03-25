@@ -6,7 +6,7 @@ on:
     branches: [testing]
 
 jobs:
-  build:
+  deploy_firebase:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,23 +23,7 @@ jobs:
         working-directory: ${{env.working-directory}}
       - name: build project
         run: npm run build
-
-  install_firebase:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-
-    steps:
       - name: install firebase
-        run: npm i firebase-tools -g
-
-  deploy_firebase:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-
-    steps:
+      run: npm i firebase-tools -g
       - name: deploy
-        run: firebase deploy --project portfolio-testing-f1801 --only hosting:testing --token ${{ secrets.FIREBASE_PORTFOLIO_TEST_TOKEN }}
+      run: firebase deploy --project portfolio-testing-f1801 --only hosting:testing --token ${{ secrets.FIREBASE_TOKEN }}
