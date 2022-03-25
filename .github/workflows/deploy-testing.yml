@@ -4,7 +4,9 @@ name: Deploy to Firebase
 on:
   push:
     branches: [testing]
-  merge:
+  pull-request:
+    types:
+      - closed
     branches: [testing]
 
 jobs:
