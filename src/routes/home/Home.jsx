@@ -21,7 +21,7 @@ const Home = () => {
           <div className="body__headshot-container">
             <div className="body__headshot-backing_orange"></div>
             <div className="body__headshot-backing_gray"></div>
-            <img alt="headshot" src={headshot} />
+            <img alt="headshot" src={window["headshot"] ?? headshot} />
             <div></div>
           </div>
         </div>
@@ -34,7 +34,7 @@ const Home = () => {
             <div className='body__information-text'>
               <p>Software Engineer</p>
               <p>Database Manager</p>
-              <p>Web Developer......</p>
+              <p>Web Developer</p>
             </div>
             <h2>I am from</h2>
             <div className='body__information-text'>
