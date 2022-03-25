@@ -12,6 +12,13 @@
           "portfolio-testing-f1801"
         ]
       }
+    },
+    "portfolio-testing-f1801": {
+      "hosting": {
+        "testing": [
+          "portfolio-testing-f1801"
+        ]
+      }
     }
   }
 }
