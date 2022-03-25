@@ -3,8 +3,7 @@ name: Deploy to Firebase
 # Run this workflow every time a new commit pushed to your repository
 on:
   push:
-    branches: [ testing ]
-
+    branches: [testing]
 
 jobs:
   build:
@@ -14,17 +13,17 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: install libraries
-      run: npm install
-      working-directory: ${{env.working-directory}}
-    - name: build project
-      run: npm run build
-    - name: install firebase
-      run: npm i firebase-tools -g  
-    - name: deploy
-      run: firebase deploy --only hosting:testing --token ${{ secrets.FIREBASE_TOKEN }}
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install libraries
+        run: npm install
+        working-directory: ${{env.working-directory}}
+      - name: build project
+        run: npm run build
+      - name: install firebase
+        run: npm i firebase-tools -g
+      - name: deploy
+        run: firebase deploy --only hosting:testing --token ${{ secrets.FIREBASE_PORTFOLIO_TEST_TOKEN }}
