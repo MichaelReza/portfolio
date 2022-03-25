@@ -13,7 +13,7 @@ const Loading = (props) => {
   const [cached, setCached] = useState(false)
 
   useEffect(() => {
-    cacheImages([image.headshot])
+    cacheImages([image.headshot, image.logo])
     setInterval(() => {
       setAnimationFinished(true)
     }, 1500)
