@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "portfolio-c5d28"
+  },
+  "targets": {
+    "portfolio-c5d28": {
+      "hosting": {
+        "testing": [
+          "portfolio-testing-f1801"
+        ],
+        "production": [
+          "portfolio-c5d28"
+        ]
+      }
+    }
   }
 }
