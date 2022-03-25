@@ -4,13 +4,9 @@ name: Deploy to Firebase
 on:
   push:
     branches: [testing]
-  pull_request:
-    types:
-      - closed
-    branches: [testing]
 
 jobs:
-  build:
+  deploy_firebase:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -30,4 +26,4 @@ jobs:
       - name: install firebase
         run: npm i firebase-tools -g
       - name: deploy
-        run: firebase deploy --project portfolio-testing-f1801 --only hosting:testing --token ${{ secrets.FIREBASE_PORTFOLIO_TEST_TOKEN }}
+        run: firebase deploy --project portfolio-testing-f1801 --only hosting:testing --token ${{ secrets.FIREBASE_TOKEN }}
