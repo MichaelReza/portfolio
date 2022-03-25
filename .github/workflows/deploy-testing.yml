@@ -24,7 +24,6 @@ jobs:
       - name: build project
         run: npm run build
 
-
   install_firebase:
     runs-on: ubuntu-latest
     strategy:
@@ -35,8 +34,7 @@ jobs:
       - name: install firebase
         run: npm i firebase-tools -g
 
-
-  install_firebase:
+  deploy_firebase:
     runs-on: ubuntu-latest
     strategy:
       matrix:
